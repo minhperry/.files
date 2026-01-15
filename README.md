@@ -10,13 +10,10 @@ Uses stow.
 2. Clone this
 3. Link things
 
-````
 ```bash
 cd ~/dotfiles
 stow zsh kitty bspwm polybar
 ````
-```
-```
 
 ## Adding a new config
 
