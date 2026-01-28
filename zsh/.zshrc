@@ -175,6 +175,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 
-. "$HOME/.local/bin/env"
+#. "$HOME/.local/bin/env"
 
 # xmodmap ~/.Xmodmap > /dev/null
+source ~/powerlevel10k/powerlevel10k.zsh-theme
