@@ -1,11 +1,11 @@
 configuration {
-/*	modes: "window,drun,run,ssh";*/
-/*	font: "mono 12";*/
+  modes: "window,windowcd,combi,filebrowser,drun,run,ssh";
+	font: "mono 12";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-/*	show-icons: false;*/
+	show-icons: true;
 /*	preview-cmd: ;*/
 /*	on-selection-changed: ;*/
 /*	on-mode-changed: ;*/
@@ -21,12 +21,12 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-/*	icon-theme: ;*/
+	icon-theme: "Papirus-Dark";
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-exclude-categories: ;*/
 /*	drun-show-actions: false;*/
-/*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
+	drun-display-format: "{icon} {name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
@@ -41,7 +41,7 @@ configuration {
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-/*	combi-modes: "window,run";*/
+	combi-modes: "window,drun";
 /*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
@@ -49,13 +49,12 @@ configuration {
 /*	dpi: -1;*/
 /*	threads: 0;*/
 /*	scroll-method: 0;*/
-/*	window-format: "{w}    {c}   {t}";*/
+	window-format: " [{c}]   {t}";
 /*	click-to-exit: true;*/
 /*	global-kb: false;*/
 /*	max-history-size: 25;*/
-/*	combi-hide-mode-prefix: false;*/
-/*	combi-display-format: "{mode} {text}";*/
-/*	matching-negate-char: '-' /* unsupported */;*/
+	combi-hide-mode-prefix: true;
+	combi-display-format: "{text}";
 /*	cache-dir: ;*/
 /*	window-thumbnail: false;*/
 /*	drun-use-desktop-cache: false;*/
@@ -166,4 +165,10 @@ configuration {
       directories-first: true;
       sorting-method:    "name";
   }
+}
+
+@theme "/usr/share/rofi/themes/tokyonight.rasi"
+
+entry {
+  placeholder: ">>> ";
 }
