@@ -22,7 +22,7 @@ configuration {
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
 	icon-theme: "Papirus-Dark";
-/*	drun-match-fields: "name,generic,exec,categories,keywords";*/
+	drun-match-fields: "name,generic,exec,categories,keywords";
 /*	drun-categories: ;*/
 /*	drun-exclude-categories: ;*/
 /*	drun-show-actions: false;*/
@@ -69,11 +69,7 @@ configuration {
 /*	pid: "/run/user/1000/rofi.pid";*/
 /*	display-window: ;*/
 /*	display-windowcd: ;*/
-/*	display-run: ;*/
-/*	display-ssh: ;*/
-/*	display-drun: ;*/
-/*	display-combi: ;*/
-/*	display-keys: ;*/
+    display-combi: "> ";
 /*	display-filebrowser: ;*/
 /*	display-recursivebrowser: ;*/
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
@@ -170,5 +166,5 @@ configuration {
 @theme "/usr/share/rofi/themes/tokyonight.rasi"
 
 entry {
-  placeholder: ">>> ";
+  placeholder: "Type here";
 }
