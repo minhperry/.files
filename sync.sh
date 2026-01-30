@@ -16,7 +16,7 @@ if ! $GIT_BIN diff-index --quiet HEAD; then
   if [[ $1 ]]; then
     COMMIT_MSG="$1"
   fi
-  $GIT_BIN commit -m "update dotfiles: $(date +'%d.%m.%Y %H:%M:%S')"
+  $GIT_BIN commit -m "update dotfiles: $COMMIT_MSG"
   $GIT_BIN push
 else
   echo "No changes detected."
