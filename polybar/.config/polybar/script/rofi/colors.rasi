@@ -1,0 +1,14 @@
+/*
+ * TokyoNight palette sourced from colors.ini
+ */
+
+* {
+    bg:     #24283b;
+    bg1:    #1f2335;
+    bg2:    #292e42;
+    bg3:    #2d3149;
+    bg4:    #1f2335;
+    fg:     #c0caf5;
+    ac:     #7dcfff;
+    al:     #292e42;
+}
