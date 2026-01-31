@@ -179,3 +179,11 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 # xmodmap ~/.Xmodmap > /dev/null
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# pnpm
+export PNPM_HOME="/home/minh/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
