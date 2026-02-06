@@ -1,15 +1,26 @@
-#!/bin/bash
+#!/bin/sh
 
-ENGINE=$(fcitx5-remote -n)
+ENGINE="$(fcitx5-remote -n 2>/dev/null)"
+
+# Absolute fallback
+[ -z "$ENGINE" ] && {
+  echo "??"
+  exit 0
+}
 
 case "$ENGINE" in
-"unikey")
+unikey)
   echo "vi"
   ;;
-"keyboard-de-nodeadkeys")
+keyboard-de-nodeadkeys)
   echo "de"
   ;;
+keyboard-*)
+  # Extract layout safely: keyboard-us → us
+  echo "${ENGINE##*-}"
+  ;;
 *)
-  echo "${ENGINE: -2}"
+  # Unknown but non-empty engine
+  echo "??"
   ;;
 esac
