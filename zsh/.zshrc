@@ -167,7 +167,7 @@ if [ -e /home/minhp/.nix-profile/etc/profile.d/nix.sh ]; then . /home/minhp/.nix
 alias py="python3"
 alias du="ncdu"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -187,3 +187,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+export PATH="$HOME/.local/bin:$PATH"
