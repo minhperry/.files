@@ -1,0 +1,71 @@
+// Generated from polybar/.config/polybar/colors.ini
+
+// Base colors
+$tn-bg: #24283b;
+$tn-bg-dark: #1f2335;
+$tn-bg-highlight: #292e42;
+$tn-bg-visual: #2d3149;
+$tn-bg-sidebar: #1f2335;
+$tn-bg-popup: #1f2335;
+$tn-bg-statusline: #1f2335;
+$tn-bg-float: #1f2335;
+
+$tn-fg: #c0caf5;
+$tn-fg-dark: #a9b1d6;
+$tn-fg-gutter: #3b4261;
+$tn-fg-sidebar: #a9b1d6;
+$tn-fg-float: #c0caf5;
+
+$tn-border: #3b4261;
+$tn-cursor: #c0caf5;
+$tn-selection: #364a82;
+$tn-highlight: #292e42;
+
+$tn-ui-disabled: #565f89;
+$tn-comment: #565f89;
+
+// Hues
+$tn-blue: #7aa2f7;
+$tn-cyan: #7dcfff;
+$tn-teal: #2ac3de;
+$tn-green: #9ece6a;
+$tn-yellow: #e0af68;
+$tn-orange: #ff9e64;
+$tn-red: #f7768e;
+$tn-magenta: #bb9af7;
+$tn-purple: #9d7cd8;
+
+// Semantic colors
+$tn-error: #db4b4b;
+$tn-warning: #e0af68;
+$tn-info: #0db9d7;
+$tn-hint: #1abc9c;
+
+// Git colors
+$tn-git-add: #9ece6a;
+$tn-git-change: #7aa2f7;
+$tn-git-delete: #f7768e;
+
+// Diff colors
+$tn-diff-add: #283b4d;
+$tn-diff-delete: #3f2d3d;
+$tn-diff-change: #1f2231;
+$tn-diff-text: #394b70;
+
+// Derived aliases from [colors] section
+$background: $tn-bg;
+$background-alt: $tn-bg-highlight;
+$foreground: $tn-fg;
+
+$primary: $tn-cyan;
+$secondary: $tn-magenta;
+$accent: $tn-teal;
+$alert: $tn-red;
+
+$good: $tn-green;
+$mid: $tn-yellow;
+$bad: $tn-red;
+$disabled: $tn-ui-disabled;
+
+$net-up: $tn-green;
+$net-down: $tn-red;

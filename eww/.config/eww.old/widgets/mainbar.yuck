@@ -1,0 +1,10 @@
+(include "colors.css")
+
+(
+  defwidget bar []
+  (
+    centerbox :orientation "horizontal"
+      :class "bar"
+    ()
+  )
+) 

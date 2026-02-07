@@ -1,0 +1,8 @@
+(
+  defwidget labeled-container [name]
+  (
+    box :class "container"
+    name
+    (children)
+  )
+)
