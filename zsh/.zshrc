@@ -81,7 +81,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-autosuggestions command-not-found fzf-zsh-plugin)
 DISABLE_UPDATE_PROMPT=true
 source $ZSH/oh-my-zsh.sh
-source /etc/zsh_command_not_found
+[[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
 
 # User configuration
 
@@ -173,7 +173,7 @@ alias du="ncdu"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+[[ -e /usr/share/doc/fzf ]] && source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 #. "$HOME/.local/bin/env"
 
@@ -189,3 +189,8 @@ esac
 # pnpm end
 
 export PATH="$HOME/.local/bin:$PATH"
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+source <(fzf --zsh)
+
+alias autoremove="sudo pacman -Rcns $(pacman -Qdtq)"
