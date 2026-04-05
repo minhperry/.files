@@ -191,7 +191,9 @@ esac
 export PATH="$HOME/.local/bin:$PATH"
 [[ -e /usr/share/zsh-theme-powerlevel10k ]] && source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-source <(fzf --zsh)
+if command -v fzf >/dev/null 2>&1 && fzf --help 2>&1 | grep -q -- '--zsh'; then
+  source <(fzf --zsh)
+fi
 
 if command -v pacman >/dev/null 2>&1; then
   # alias install='sudo pacman -S'
