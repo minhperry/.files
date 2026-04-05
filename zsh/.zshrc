@@ -189,8 +189,13 @@ esac
 # pnpm end
 
 export PATH="$HOME/.local/bin:$PATH"
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+[[ -e /usr/share/zsh-theme-powerlevel10k ]] && source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 source <(fzf --zsh)
 
-alias autoremove="sudo pacman -Rcns $(pacman -Qdtq)"
+if command -v pacman >/dev/null 2>&1; then
+  # alias install='sudo pacman -S'
+  # alias update='sudo pacman -Syu'
+  alias autoremove="sudo pacman -Rcns $(pacman -Qdtq)"
+fi
+
