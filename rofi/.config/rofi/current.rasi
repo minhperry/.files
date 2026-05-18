@@ -94,6 +94,11 @@ window {
 mainbox {
     padding: 0;
     border:  0;
+    children: [ inputbar, message, mode-switcher]
+}
+mode-switcher {
+    enabled: true;
+    location: south;
 }
 message {
     padding:      1px ;

@@ -1,5 +1,5 @@
 configuration {
-  modes: "window,combi,filebrowser,drun,run,ssh";
+  modi: "window,combi,filebrowser,drun,run,ssh";
 	font: "mono 12";
 //	location: 0;
 //	yoffset: 0;
@@ -14,8 +14,8 @@ configuration {
 //	on-menu-error: ;
 //	on-screenshot-taken: ;
 //	terminal: "rofi-sensible-terminal";
-//	ssh-client: "ssh";
-//	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
+  ssh-client: "ssh";
+	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
 //	run-command: "{cmd}";
 //	run-list-command: "";
 //	run-shell-command: "{terminal} -e {cmd}";
