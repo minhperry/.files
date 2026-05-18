@@ -1,0 +1,9 @@
+{
+    "pulseaudio": {
+        "format": "<span color='#7dcfff'></span>  {volume:3}%",
+        "format-muted": "<span color='#7dcfff'></span>    0%",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "scroll-step": 1,
+        "tooltip": false
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "cpu": {
+        "format": "<span color='#7dcfff'></span>  {usage:2}%",
+        "interval": 2,
+        "tooltip": false
+    }
+}

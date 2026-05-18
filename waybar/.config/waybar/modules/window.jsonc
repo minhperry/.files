@@ -1,0 +1,7 @@
+{
+    "custom/window": {
+        "exec": "~/.config/waybar/scripts/window.sh",
+        "interval": 2,
+        "tooltip": false
+    }
+}

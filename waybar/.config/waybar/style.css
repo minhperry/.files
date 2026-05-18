@@ -15,9 +15,16 @@ window#waybar {
 
 /* ── Modules ───────────────────────────────────────────────────── */
 
-.module {
+.__module {
     padding: 0 4px;
     color: #c0caf5;
+}
+
+.modules-left {
+    padding-left: 8px;
+}
+.modules-right {
+    padding-right: 8px;
 }
 
 /* ── Separator ─────────────────────────────────────────────────── */

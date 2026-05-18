@@ -1,0 +1,24 @@
+{
+  "custom/sep": {
+      "format": "|",
+      "tooltip": false
+  },
+  "custom/keyboard": {
+      "exec": "~/.config/waybar/scripts/keyboard.sh",
+      "interval": 1,
+      "on-click": "fcitx5-remote -t",
+      "tooltip": false
+  },
+  "custom/caps": {
+    "exec": "~/.config/waybar/scripts/locks.sh caps",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip": false
+  },
+  "custom/num": {
+    "exec": "~/.config/waybar/scripts/locks.sh num",
+    "return-type": "json",
+    "interval": 1,
+    "tooltip": false
+  }
+}
