@@ -1,7 +1,7 @@
 {
     "network": {
-        "format-ethernet": "<span color='#9ece6a'>󰁞</span> {bandwidthUpBytes:5}  <span color='#f7768e'>󰁆</span> {bandwidthDownBytes:5}",
-        "format-wifi": "<span color='#9ece6a'>󰁞</span> {bandwidthUpBytes:5}  <span color='#f7768e'>󰁆</span> {bandwidthDownBytes:5}",
+        "format-ethernet": "<span color='#9ece6a'>󰁞</span> {bandwidthUpBytes:10}  <span color='#f7768e'>󰁆</span> {bandwidthDownBytes:10}",
+        "format-wifi": "<span color='#9ece6a'>󰁞</span> {bandwidthUpBytes:10}  <span color='#f7768e'>󰁆</span> {bandwidthDownBytes:10}",
         "format-disconnected": "<span color='#707880'></span>",
         "interval": 1,
         "tooltip": false
