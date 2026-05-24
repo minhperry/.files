@@ -1,8 +1,8 @@
 {
   "clock": {
-    // "format": "{:%H:%M:%S}",
+    "format": "{:%H:%M:%S}",
     "interval": 1,
-    "format": "{:%a %d.%m %H:%M:%S}",
+    "format-alt": "{:%a %d.%m.%Y}",
     "tooltip-format": "{calendar}",
     "calendar": {
       "mode": "year",

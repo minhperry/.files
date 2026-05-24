@@ -11,9 +11,9 @@
         "custom/sep",
         // "custom/window"
         "network"
-    ],   
+    ],
     "modules-center": [
-        "clock"
+        "wlr/taskbar"
     ],
     "modules-right": [
         "custom/keyboard",
@@ -25,7 +25,9 @@
         "group/system",
         "memory",
         "custom/sep",
-        "battery"
+        "battery",
+        "custom/sep",
+        "clock"
         // "tray"
     ]
 }
