@@ -1,0 +1,125 @@
+@import "colors.css";
+
+/* ── Modules ───────────────────────────────────────────────────── */
+
+.__module {
+	padding: 0 4px;
+	color: @foreground;
+}
+
+.modules-left {
+	padding-left: 8px;
+}
+
+.modules-right {
+	padding-right: 8px;
+}
+
+/* ── Separator ─────────────────────────────────────────────────── */
+
+#custom-sep {
+	color: @disabled;
+	padding: 0 2px;
+}
+
+/* ── Window ────────────────────────────────────────────────────── */
+
+#custom-window {
+	padding: 0 6px;
+}
+
+/* ── Clock ─────────────────────────────────────────────────────── */
+
+#clock {
+	color: @primary;
+	padding: 0 6px;
+}
+
+/* ── Keyboard ──────────────────────────────────────────────────── */
+
+#custom-keyboard {
+	color: @primary;
+	padding: 0 4px;
+}
+
+#keyboard-state-caps,
+#keyboard-state-num {
+	padding: 0 2px;
+}
+
+#keyboard-state-caps.locked,
+#keyboard-state-num.locked {
+	color: @foreground;
+}
+
+#keyboard-state-caps.unlocked,
+#keyboard-state-num.unlocked {
+	color: @disabled;
+}
+
+/* ── Audio ─────────────────────────────────────────────────────── */
+
+#pulseaudio {
+	padding: 0 7px 0 6px;
+}
+
+#pulseaudio .icon,
+#pulseaudio label:first-child {
+	color: @primary;
+}
+
+#pulseaudio.muted {
+	color: @disabled;
+}
+
+/* ── CPU / Memory ──────────────────────────────────────────────── */
+
+#cpu,
+#temperature,
+#memory {
+	padding: 0 7px 0 6px;
+}
+
+/* ── Network ───────────────────────────────────────────────────── */
+
+#network {
+	padding: 0 6px;
+}
+
+#network.disconnected {
+	color: @disabled;
+}
+
+/* ── Battery ───────────────────────────────────────────────────── */
+
+#battery {
+	padding: 0 6px;
+	color: @primary;
+}
+
+#battery.warning {
+	color: @mid;
+}
+
+#battery.critical {
+	color: @bad;
+	animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+	to { color: @foreground; }
+}
+
+/* ── Tray ──────────────────────────────────────────────────────── */
+
+#tray {
+	padding: 0 6px;
+}
+
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+}
