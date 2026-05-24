@@ -17,7 +17,6 @@
     ],
     "modules-right": [
         "custom/keyboard",
-        // "custom/sep",
         // "keyboard-state#caps",
         // "keyboard-state#num",
         "custom/sep",
