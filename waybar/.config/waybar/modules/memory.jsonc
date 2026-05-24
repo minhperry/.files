@@ -1,7 +1,0 @@
-{
-    "memory": {
-        "format": "<span color='#7dcfff'></span>  {used:0.1f}G",
-        "interval": 2,
-        "tooltip": false
-    }
-}

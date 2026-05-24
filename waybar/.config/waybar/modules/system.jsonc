@@ -4,6 +4,7 @@
     "format": "<span color='#7dcfff'></span>",
     "interval": 2,
     "tooltip": false,
+    //"tooltip-format": "{avg_frequency}GHz",
     "states": {
       "warning": 75,
       "critical": 90
@@ -22,5 +23,10 @@
       "",
       ""
     ]
+  },
+  "memory": {
+    "format": "<span color='#7dcfff'></span>  {used:0.2f}G",
+    "interval": 2,
+    "tooltip-format": "Used {percentage}% ({used:0.2f}G/{total:0.2f}G)"
   }
 }
