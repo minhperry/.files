@@ -10,10 +10,10 @@
         "group/distro-group",
         "custom/sep",
         // "custom/window"
-        "network"
+        "custom/bandwidth"
     ],
     "modules-center": [
-        "wlr/taskbar"
+        // "wlr/taskbar"
     ],
     "modules-right": [
         "custom/keyboard",
@@ -23,7 +23,6 @@
         "group/audio",
         "custom/sep",
         "group/system",
-        "memory",
         "custom/sep",
         "battery",
         "custom/sep",
