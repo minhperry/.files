@@ -11,5 +11,12 @@
       "pulseaudio#microphone"
     ],
     "tooltip": false
+  },
+  "group/system": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "temperature"
+    ]
   }
 }

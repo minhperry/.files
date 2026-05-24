@@ -1,7 +1,26 @@
 {
-    "cpu": {
-        "format": "<span color='#7dcfff'></span>  {usage:2}%",
-        "interval": 2,
-        "tooltip": false
+  "cpu": {
+    "format-alt": "<span color='#7dcfff'></span>  {usage:2}%",
+    "format": "<span color='#7dcfff'></span>",
+    "interval": 2,
+    "tooltip": false,
+    "states": {
+      "warning": 75,
+      "critical": 90
     }
+  },
+  "temperature": {
+    "tooltip": false,
+    "interval": 5,
+    "thermal-zone": 2,
+    "critical-threshold": 92,
+    "format": "<span color='#7dcfff'>{icon}</span>",
+    "format-alt": "<span color='#7dcfff'>{icon}</span> {temperatureC}°C",
+    "format-critical": "<span color='#f7768e'>󱗗 </span> {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  }
 }
