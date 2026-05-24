@@ -1,9 +1,32 @@
 {
-    "pulseaudio": {
-        "format": "<span color='#7dcfff'></span>  {volume:3}%",
-        "format-muted": "<span color='#7dcfff'></span>    0%",
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "scroll-step": 1,
-        "tooltip": false
+  "pulseaudio": {
+    "format": "<span color='#7dcfff'>{icon}</span>",
+    //"format": "<span color='#7dcfff'></span>  {volume:3}%",
+    // "format-muted": "<span color='#7dcfff'></span>    0%",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "scroll-step": 1,
+    // "tooltip-format": "{volume}%",
+    "tooltip": false,
+    "format-icons": {
+      "headphone": "󰋋",
+      "headset": "󰋋",
+      "hands-free": "󰋋",
+      "default": [
+          "",
+          "",
+          ""
+      ]
+    },
+    "pulseaudio#microphone": {
+      "format": "{format_source}",
+      "format-source": "",
+      "format-source-muted": ""
+    },
+    "pulseaudio/slider": {
+      "min": 0,
+      "max": 100,
+      "orientation": "horizontal"
     }
+  }
 }
