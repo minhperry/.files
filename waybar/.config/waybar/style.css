@@ -1,4 +1,7 @@
 /* Tokyo Night */
+@import "tokens/colors.css";
+@import "tokens/slider.css";
+
 
 * {
     font-family: "MesloLGS Nerd Font", monospace;

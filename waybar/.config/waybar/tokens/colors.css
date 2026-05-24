@@ -1,0 +1,64 @@
+@define-color bg #24283b;
+@define-color bg-dark #1f2335;
+@define-color bg-highlight #292e42;
+@define-color bg-visual #2d3149;
+@define-color bg-sidebar #1f2335;
+@define-color bg-popup #1f2335;
+@define-color bg-statusline #1f2335;
+@define-color bg-float #1f2335;
+
+@define-color fg #c0caf5;
+@define-color fg-dark #a9b1d6;
+@define-color fg-gutter #3b4261;
+@define-color fg-sidebar #a9b1d6;
+@define-color fg-float #c0caf5;
+
+@define-color border #3b4261;
+@define-color cursor #c0caf5;
+@define-color selection #364a82;
+@define-color highlight #292e42;
+
+@define-color ui-disabled #565f89;
+@define-color comment #565f89;
+
+@define-color blue #7aa2f7;
+@define-color cyan #7dcfff;
+@define-color teal #2ac3de;
+@define-color green #9ece6a;
+@define-color yellow #e0af68;
+@define-color orange #ff9e64;
+@define-color red #f7768e;
+@define-color magenta #bb9af7;
+@define-color purple #9d7cd8;
+
+@define-color error #db4b4b;
+@define-color warning #e0af68;
+@define-color info #0db9d7;
+@define-color hint #1abc9c;
+
+@define-color git-add #9ece6a;
+@define-color git-change #7aa2f7;
+@define-color git-delete #f7768e;
+
+@define-color diff-add #283b4d;
+@define-color diff-delete #3f2d3d;
+@define-color diff-change #1f2231;
+@define-color diff-text #394b70;
+
+@define-color background #24283b;
+@define-color background-alt #292e42;
+@define-color foreground #c0caf5;
+
+@define-color primary #7dcfff;
+@define-color secondary #bb9af7;
+@define-color accent #2ac3de;
+@define-color alert #f7768e;
+
+@define-color good #9ece6a;
+@define-color mid #e0af68;
+@define-color bad #f7768e;
+@define-color disabled #565f89;
+
+@define-color net-up #9ece6a;
+@define-color net-down #f7768e;
+
