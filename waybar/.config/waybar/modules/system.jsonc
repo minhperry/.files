@@ -1,7 +1,7 @@
 {
   "cpu": {
-    "format-alt": "<span color='#7dcfff'></span>  {usage:2}%",
-    "format": "<span color='#7dcfff'></span>",
+    "format": "<span color='#7dcfff'></span>  {usage:2}%",
+    // "format": "<span color='#7dcfff'></span>",
     "interval": 2,
     "tooltip": false,
     //"tooltip-format": "{avg_frequency}GHz",
@@ -15,8 +15,8 @@
     "interval": 5,
     "thermal-zone": 2,
     "critical-threshold": 92,
-    "format": "<span color='#7dcfff'>{icon}</span>",
-    "format-alt": "<span color='#7dcfff'>{icon}</span> {temperatureC}°C",
+    //"format": "<span color='#7dcfff'>{icon}</span>",
+    "format": "<span color='#7dcfff'>{icon}</span> {temperatureC}°C",
     "format-critical": "<span color='#f7768e'>󱗗 </span> {temperatureC}°C",
     "format-icons": [
       "",
@@ -28,5 +28,12 @@
     "format": "<span color='#7dcfff'></span>  {used:0.2f}G",
     "interval": 2,
     "tooltip-format": "Used {percentage}% ({used:0.2f}G/{total:0.2f}G)"
+  },
+  "group/system": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "memory"
+    ]
   }
 }
