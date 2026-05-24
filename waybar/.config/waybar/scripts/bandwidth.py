@@ -1,10 +1,12 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Source https://github.com/Alexays/Waybar/issues/2162
 
 import subprocess
 from time import sleep
 
+INTERVAL = 2
+SUFFIX = "" # "B/s" 
 
 def default_interface():
     process = subprocess.run(
@@ -38,16 +40,16 @@ def format_size(size):
 
 
 def main():
-    refresh_interval = 2
-    rx_icon = "<span color='#9ece6a'>󰁞</span> "
-    tx_icon = "<span color='#f7768e'>󰁆</span> "
+    refresh_interval = INTERVAL
+    tx_icon = "<span color='#9ece6a'>󰁞</span> "
+    rx_icon = "<span color='#f7768e'>󰁆</span> "
     num_left = "<span>"
     num_right = "</span>"
     fmt_str = (
         f"{rx_icon}{num_left}{{rx}}{{unit_suffix}}{num_right}  "
         f"{tx_icon}{num_left}{{tx}}{{unit_suffix}}{num_right}"
     )
-    unit_suffix = ""
+    unit_suffix = SUFFIX
     iface = default_interface()
 
     rx_bytes, tx_bytes = get_rx_tx_bytes(iface)

@@ -42,19 +42,8 @@
 	padding: 0 4px;
 }
 
-#keyboard-state-caps,
-#keyboard-state-num {
-	padding: 0 2px;
-}
-
-#keyboard-state-caps.locked,
-#keyboard-state-num.locked {
-	color: @foreground;
-}
-
-#keyboard-state-caps.unlocked,
-#keyboard-state-num.unlocked {
-	color: @disabled;
+#keyboard-state{
+	padding: 0 6px 0 7px;
 }
 
 /* ── Audio ─────────────────────────────────────────────────────── */
