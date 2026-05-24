@@ -20,11 +20,15 @@ Variants {
         right: true
       }
 
+      color: "#24283b"
       implicitHeight: 30
 
       Text {
         id: clock
         anchors.centerIn: parent
+        color: "#c0caf5"
+        font.family: "MesloLGS Nerd Font"
+        font.pixelSize: 13
 
         Process {
           id: dateProc
