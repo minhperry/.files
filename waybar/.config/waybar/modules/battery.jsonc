@@ -17,7 +17,7 @@
             "critical": 15
         },
         "full-at": 99,
-        "interval": 5,
+        "interval": 60,
         "tooltip": false
     }
 }
