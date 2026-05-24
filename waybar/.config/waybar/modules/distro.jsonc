@@ -1,4 +1,5 @@
 {
+  // The custom module that has slidable drawer
   "custom/distro": {
     "format": "",
     "tooltip": false

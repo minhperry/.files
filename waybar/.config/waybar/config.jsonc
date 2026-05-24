@@ -8,6 +8,7 @@
     "spacing": 0,
     "modules-left": [
         "group/distro-group",
+        "custom/sep",
         // "custom/window"
         "network"
     ],   
@@ -23,7 +24,6 @@
         "group/audio",
         "custom/sep",
         "group/system",
-        "custom/sep",
         "memory",
         "custom/sep",
         "battery"
