@@ -1,6 +1,6 @@
 {
     "include": [
-        "~/.config/waybar/modules/*.jsonc"
+        "./modules/*.jsonc"
     ],
     "layer": "top",
     "position": "top",
@@ -19,7 +19,7 @@
         // "keyboard-state#caps",
         // "keyboard-state#num",
         "custom/sep",
-        "pulseaudio",
+        "group/audio",
         "custom/sep",
         "cpu",
         "custom/sep",
