@@ -2,5 +2,9 @@
   "custom/sep": {
     "format": "|",
     "tooltip": false
+  },
+  "custom/placeholder": {
+    "format": "",
+    "tooltip": false
   }
 }

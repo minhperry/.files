@@ -1,10 +1,13 @@
 {
   "keyboard-state": {
-    "numlock": true,
+    // "numlock": true,
     "capslock": true,
     "format": {
-      "numlock": "#",
-      "capslock": "a"
+      "capslock": "{icon}"
+    },
+    "format-icons": {
+      "locked": "<span color='#7dcfff'>A</span>",
+      "unlocked": "<span color='#707880'>a</span>"
     }
   }
 }

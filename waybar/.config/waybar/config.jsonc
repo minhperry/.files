@@ -1,32 +1,35 @@
 {
-    "include": [
-        "./modules/*.jsonc"
-    ],
-    "layer": "top",
-    "position": "top",
-    "height": 33,
-    "spacing": 0,
-    "modules-left": [
-        "group/distro-group",
-        "custom/sep",
-        // "custom/window"
-        "custom/bandwidth"
-    ],
-    "modules-center": [
-        // "wlr/taskbar"
-    ],
-    "modules-right": [
-        "custom/keyboard",
-        // "keyboard-state#caps",
-        // "keyboard-state#num",
-        "custom/sep",
-        "group/audio",
-        "custom/sep",
-        "group/system",
-        "custom/sep",
-        "battery",
-        "custom/sep",
-        "clock"
-        // "tray"
-    ]
+  "include": [
+    "./modules/*.jsonc"
+  ],
+  "layer": "top",
+  "position": "top",
+  "height": 33,
+  "spacing": 0,
+  "modules-left": [
+    "group/distro-group",
+    "custom/sep",
+    // "custom/window"
+    "custom/bandwidth"
+  ],
+  "modules-center": [
+    // "wlr/taskbar"
+    "custom/placeholder"
+  ],
+  "modules-right": [
+    "custom/keyboard",
+    "custom/sep",
+    "keyboard-state",
+    // "keyboard-state#caps",
+    // "keyboard-state#num",
+    "custom/sep",
+    "group/audio",
+    "custom/sep",
+    "group/system",
+    "custom/sep",
+    "battery",
+    "custom/sep",
+    "clock"
+    // "tray"
+  ]
 }
