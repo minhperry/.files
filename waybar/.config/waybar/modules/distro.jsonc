@@ -26,7 +26,7 @@
   },
   "custom/browser": {
     "format": "",
-    "on-click": "firefox",
+    "on-click": "flatpak run org.mozilla.firefox",
     "tooltip": false
   }
 }

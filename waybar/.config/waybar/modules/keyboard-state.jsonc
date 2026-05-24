@@ -1,0 +1,10 @@
+{
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": {
+      "numlock": "#",
+      "capslock": "a"
+    }
+  }
+}
