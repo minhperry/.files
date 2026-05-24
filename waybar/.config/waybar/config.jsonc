@@ -4,7 +4,7 @@
     ],
     "layer": "top",
     "position": "top",
-    "height": 34,
+    "height": 30,
     "spacing": 0,
     "modules-left": [
         // "custom/window"
