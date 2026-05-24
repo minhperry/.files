@@ -1,8 +1,24 @@
 {
-    "clock": {
-        "format": "{:%H:%M:%S}",
-        "interval": 1,
-        "format-alt": "{:%d.%m.%Y %H:%M:%S}",
-        "tooltip": false
+  "clock": {
+    // "format": "{:%H:%M:%S}",
+    "interval": 1,
+    "format": "{:%a %d.%m %H:%M:%S}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "year",
+      "weeks-pos": "right",
+      "mode-mon-col": 4,
+      "iso8601": true,
+      "format": {
+        "months":     "<span color='#c0caf5'>{}</span>",
+        "days":       "<span color='#a9b1d6'>{}</span>",
+        "weeks":      "<span color='#565f89'>W{}</span>",
+        "weekdays":   "<span color='#7dcfff'>{}</span>",
+        "today":      "<span bgcolor='#e0af68'><b><span color='#292e42'>{}</span></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode"
     }
+  }
 }
