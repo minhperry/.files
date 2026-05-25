@@ -1,0 +1,8 @@
+{
+  "custom/center": {
+    "exec": "$HOME/.config/waybar/scripts/center.sh",
+    "interval": 1,
+    "tooltip": false,
+    "return-type": "json"
+  }
+}
