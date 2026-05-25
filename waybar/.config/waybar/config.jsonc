@@ -14,7 +14,7 @@
   ],
   "modules-center": [
     // "wlr/taskbar"
-    "custom/placeholder"
+    "custom/center"
   ],
   "modules-right": [
     "custom/keyboard",

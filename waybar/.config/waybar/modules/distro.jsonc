@@ -29,6 +29,11 @@
     "on-click": "flatpak run org.mozilla.firefox",
     "tooltip": false
   },
+  "custom/minecraft": {
+    "format": "󰍳",
+    "on-click": "prismlauncher",
+    "tooltip": false
+  },
   "group/distro-group": {
     "orientation": "horizontal",
     "drawer": {
@@ -39,9 +44,10 @@
       "custom/distro",
       "custom/terminal",
       "custom/code",
-      "custom/office",
+      // "custom/office",
       "custom/files",
-      "custom/browser"
+      "custom/browser",
+      "custom/minecraft"
     ]
   }
 }
