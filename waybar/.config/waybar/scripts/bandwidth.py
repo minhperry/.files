@@ -41,8 +41,8 @@ def format_size(size):
 
 def main():
     refresh_interval = INTERVAL
-    tx_icon = "<span color='#9ece6a'>󰁞</span> "
-    rx_icon = "<span color='#f7768e'>󰁆</span> "
+    tx_icon = "<span color='#f7768e'>󰁞</span> "
+    rx_icon = "<span color='#9ece6a'>󰁆</span> "
     num_left = "<span>"
     num_right = "</span>"
     fmt_str = (
