@@ -1,0 +1,1 @@
+https://www.reddit.com/r/niri/comments/1qcm5cd/not_really_a_guide_to_setup_dolphin_kde_file/
