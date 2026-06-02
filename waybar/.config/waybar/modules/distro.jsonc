@@ -31,7 +31,7 @@
   },
   "custom/minecraft": {
     "format": "󰍳",
-    "on-click": "prismlauncher",
+    "on-click": "prismlauncher &> /dev/null",
     "tooltip": false
   },
   "group/distro-group": {

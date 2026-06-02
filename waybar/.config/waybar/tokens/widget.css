@@ -149,3 +149,16 @@
 #tray > .needs-attention {
 	-gtk-icon-effect: highlight;
 }
+
+/* ── Niri Workspace ────────────────────────────────────────────── */
+#workspaces button {
+  color: @fg-gutter;
+}
+
+#workspaces button.active {
+  color: @fg;
+}
+
+#window {
+  padding: 0 6px;
+}

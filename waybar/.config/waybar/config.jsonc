@@ -9,17 +9,16 @@
   "modules-left": [
     "group/distro-group",
     "custom/sep",
-    // "custom/window"
-    "custom/bandwidth"
+    "niri/window"
   ],
   "modules-center": [
     // "wlr/taskbar"
-    "custom/center"
+    "niri/workspaces"
   ],
   "modules-right": [
     "custom/keyboard",
-    "custom/sep",
-    "keyboard-state",
+    // "custom/sep",
+    // "keyboard-state",
     // "keyboard-state#caps",
     // "keyboard-state#num",
     "custom/sep",
@@ -27,7 +26,8 @@
     "custom/sep",
     "group/system",
     "custom/sep",
-    "battery",
+    // "battery",
+    "custom/bandwidth",
     "custom/sep",
     "clock"
     // "tray"

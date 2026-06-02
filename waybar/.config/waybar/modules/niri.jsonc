@@ -1,0 +1,17 @@
+{
+  "niri/workspaces": {
+    "format": "{value}",
+    /*"format-icons": {
+      "active": "<span color='#c0caf5'>{index}</span>",
+      "default": "<span color='#292e42'>{index}</span>"
+    }*/
+  },
+  "niri/window": {
+    "format": "{title}",
+    "max-length": 30,
+    "rewrite": {
+	    "(.*) Mozilla Firefox": "<span color='#ff9500'></span> $1",
+		  "(.*) - zsh": "> [$1]"
+	  }
+  },
+}
