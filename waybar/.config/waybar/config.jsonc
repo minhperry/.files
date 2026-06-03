@@ -9,7 +9,7 @@
   "modules-left": [
     "clock",
     "custom/sep",
-    "niri/window",
+    "niri/window"
   ],
   "modules-center": [
     "niri/workspaces"
@@ -23,5 +23,6 @@
     "custom/sep",
     "custom/bandwidth",
     "custom/sep",
+    "group/group-power"
   ]
 }

@@ -162,3 +162,30 @@
 #window {
   padding: 0 6px;
 }
+
+/* ── Power ─────────────────────────────────────────────────────── */
+
+#group-power {
+	color: @primary;
+	padding: 0 4px;
+}
+
+#custom-power,
+#custom-quit,
+#custom-lock,
+#custom-reboot {
+	padding: 0 10px;
+}
+
+#custom-power, #custom-quit {
+	color: @red;
+}
+#custom-lock {
+	color: @cyan;
+}
+#custom-reboot {
+	color: @orange;
+}
+#custom-suspend {
+	color: @secondary;
+}
