@@ -7,29 +7,21 @@
   "height": 33,
   "spacing": 0,
   "modules-left": [
-    "group/distro-group",
+    "clock",
     "custom/sep",
-    "niri/window"
+    "niri/window",
   ],
   "modules-center": [
-    // "wlr/taskbar"
     "niri/workspaces"
   ],
   "modules-right": [
-    "custom/keyboard",
-    // "custom/sep",
-    // "keyboard-state",
-    // "keyboard-state#caps",
-    // "keyboard-state#num",
+    "tray",
     "custom/sep",
     "group/audio",
     "custom/sep",
     "group/system",
     "custom/sep",
-    // "battery",
     "custom/bandwidth",
     "custom/sep",
-    "clock"
-    // "tray"
   ]
 }

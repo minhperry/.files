@@ -10,7 +10,7 @@
     "format": "{title}",
     "max-length": 30,
     "rewrite": {
-	    "(.*) Mozilla Firefox": "<span color='#ff9500'></span> $1",
+	    "(.*) Mozilla Firefox": "<span color='#ff9500' baseline_shift='-2pt' size='14pt'></span> $1",
 		  "(.*) - zsh": "> [$1]"
 	  }
   },
