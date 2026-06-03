@@ -9,8 +9,9 @@
       "modules": [
         "custom/power", // First element is the "group leader" and won't ever be hidden
         "custom/quit",
-        "custom/lock",
-        "custom/reboot"
+        // "custom/lock",
+        "custom/reboot",
+        "custom/suspend"
       ]
     },
     "custom/quit": {
@@ -32,5 +33,10 @@
       "format": "",
       "tooltip": false,
       "on-click": "shutdown now"
+    },
+    "custom/suspend": {
+      "format": "󰤂",
+      "tooltip": false,
+      "on-click": "loginctl lock-session && systemctl suspend"
     }
 }
