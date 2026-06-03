@@ -9,7 +9,7 @@
       "modules": [
         "custom/power", // First element is the "group leader" and won't ever be hidden
         "custom/quit",
-        // "custom/lock",
+        "custom/lock",
         "custom/reboot",
         "custom/suspend"
       ]
@@ -22,21 +22,26 @@
     "custom/lock": {
       "format": "󰍁",
       "tooltip": false,
-      "on-click": "swaylock"
+      "on-click": "hyprlock -q"
     },
     "custom/reboot": {
       "format": "󰜉",
       "tooltip": false,
-      "on-click": "reboot"
+      "on-click": "systemctl reboot"
     },
     "custom/power": {
       "format": "",
       "tooltip": false,
-      "on-click": "shutdown now"
+      "on-click": "systemctl poweroff"
     },
     "custom/suspend": {
       "format": "󰤂",
       "tooltip": false,
-      "on-click": "loginctl lock-session && systemctl suspend"
+      "on-click": "sh -c 'hyprlock -q & sleep 0.2; systemctl suspend'"
     }
+
+    /*
+    =============== TODO ===============
+    Install wleave/wlogout in place
+    */
 }
