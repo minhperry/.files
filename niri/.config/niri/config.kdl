@@ -350,6 +350,14 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+  match app-id="com.github.hluk.copyq"
+  open-floating true
+
+  max-width 400
+  max-height 750
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -367,6 +375,12 @@ window-rule {
 window-rule {
     geometry-corner-radius 4
     clip-to-geometry true
+}
+
+gestures {
+  hot-corners {
+    bottom-left
+  }
 }
 
 binds {
@@ -616,8 +630,11 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+V       { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+V       { toggle-window-floating; }
+    // Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    
+    // CopyQ 
+    Mod+V { spawn "copyq" "--start-server" "show"; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
