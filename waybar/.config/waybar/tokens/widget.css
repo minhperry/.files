@@ -177,8 +177,11 @@
 #custom-suspend {
 	padding: 0 10px;
 }
+#custom-wlogout {
+	padding: 0 8px;
+}
 
-#custom-power, #custom-quit {
+#custom-power, #custom-quit, #custom-wlogout {
 	color: @red;
 }
 #custom-lock {

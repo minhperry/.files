@@ -18,11 +18,12 @@
     "tray",
     "custom/sep",
     "group/audio",
+    "bluetooth",
     "custom/sep",
     "group/system",
     "custom/sep",
     "custom/bandwidth",
     "custom/sep",
-    "group/group-power"
+    "custom/wlogout"
   ]
 }

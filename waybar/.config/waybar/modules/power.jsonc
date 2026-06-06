@@ -38,8 +38,12 @@
       "format": "󰤂",
       "tooltip": false,
       "on-click": "sh -c 'hyprlock -q & sleep 0.2; systemctl suspend'"
+    },
+    "custom/wlogout": {
+      "format": "",
+      "tooltip": false,
+      "on-click": "wlogout"
     }
-
     /*
     =============== TODO ===============
     Install wleave/wlogout in place
