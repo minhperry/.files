@@ -71,6 +71,7 @@ input {
 
     // The Super key aka fuckass Windows key
     // mod-key "Super"
+    workspace-auto-back-and-forth
 }
 
 // You can configure outputs by their name, which you can find
@@ -113,7 +114,8 @@ output "eDP-1" {
 // For the external monitor aka HDMI-A-1
 output "HDMI-A-1" {
     mode "1920x1080@143.998"
-    scale 1
+    // mode "1920x1080@60.000"
+    scale 1.0
     transform "normal"
     position x=0 y=0
     focus-at-startup
@@ -379,7 +381,7 @@ window-rule {
 
 gestures {
   hot-corners {
-    bottom-left
+    off
   }
 }
 
@@ -403,6 +405,7 @@ binds {
     Alt+Space hotkey-overlay-title="Run an Application" { spawn-sh "killall rofi || rofi -show"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
     Mod+E hotkey-overlay-title="Open Dolphin" { spawn "dolphin"; }
+    Mod+B { spawn "flatpak" "run" "org.mozilla.firefox"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.

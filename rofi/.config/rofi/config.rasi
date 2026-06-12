@@ -45,8 +45,8 @@ configuration {
 //	parse-hosts: false;
 //	parse-known-hosts: true;
 // combi-modes: "";
-//	matching: "normal";
-//	tokenize: true;
+	matching: "normal";
+	tokenize: true;
 //	m: "-5";
 //	filter: ;
 //	dpi: -1;
