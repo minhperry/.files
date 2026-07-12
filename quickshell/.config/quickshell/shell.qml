@@ -36,7 +36,7 @@ Variants {
           running: true
 
           stdout: StdioCollector {
-            onStreamFinished: clock.text = this.text
+            onStreamFinished: clock.text = this.tex
           }
         }
 

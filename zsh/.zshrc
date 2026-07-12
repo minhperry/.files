@@ -81,7 +81,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-autosuggestions command-not-found fzf-zsh-plugin)
 DISABLE_UPDATE_PROMPT=true
 source $ZSH/oh-my-zsh.sh
-[[ -e /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found
 
 # User configuration
 
@@ -130,13 +129,9 @@ command -v javar > /dev/null && alias javar='~/bin/javar'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# NPM_PACKAGES="${HOME}/.npm-packages"
-
-# export PATH="$PATH:$NPM_PACKAGES/bin"
-
 # Preserve MANPATH if you already defined it somewhere in your config.
 # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
-export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+export MANPATH="${MANPATH:-$(manpath)}"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -151,37 +146,25 @@ function mkcd {
 }
 # export mkcd="mkcd"
 
-alias nvim="~/bin/nvim-linux64/bin/nvim"
 # source ~/.profile
 
-alias nvimcfg="nvim ~/.config/nvim/init.vim"
+alias nvimcfg="nvim ~/.config/nvim/init.lua"
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-
-# remove dir
-alias rmd="rm -r"
-
-if [ -e /home/minhp/.nix-profile/etc/profile.d/nix.sh ]; then . /home/minhp/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [[ -r "$HOME/.nix-profile/etc/profile.d/nix.sh" ]]; then
+  source "$HOME/.nix-profile/etc/profile.d/nix.sh"
+fi
 
 alias py="python3"
 alias du="ncdu"
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-[[ -e /usr/share/doc/fzf ]] && source /usr/share/doc/fzf/examples/key-bindings.zsh
-
 #. "$HOME/.local/bin/env"
 
 # xmodmap ~/.Xmodmap > /dev/null
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # pnpm
-export PNPM_HOME="/home/minh/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -189,7 +172,6 @@ esac
 # pnpm end
 
 export PATH="$HOME/.local/bin:$PATH"
-[[ -e /usr/share/zsh-theme-powerlevel10k ]] && source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 if command -v fzf >/dev/null 2>&1 && fzf --help 2>&1 | grep -q -- '--zsh'; then
   source <(fzf --zsh)
@@ -201,3 +183,6 @@ if command -v pacman >/dev/null 2>&1; then
   alias autoremove="sudo pacman -Rcns $(pacman -Qdtq)"
 fi
 
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK.
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
