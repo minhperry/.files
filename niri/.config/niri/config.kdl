@@ -297,7 +297,7 @@ spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 // Start polkit
-spawn-at-startup "/usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1"
+spawn-at-startup "/usr/libexec/kf6/polkit-kde-authentication-agent-1"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
