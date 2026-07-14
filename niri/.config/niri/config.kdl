@@ -430,7 +430,7 @@ binds {
     Alt+Space hotkey-overlay-title="Run an Application" { spawn-sh "killall rofi || rofi -show"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
     Mod+E hotkey-overlay-title="Open Dolphin" { spawn "dolphin"; }
-    Mod+B hotkey-overlay-title="Open Firefox Browser" { spawn "flatpak" "run" "org.mozilla.firefox"; }
+    Mod+B hotkey-overlay-title="Open Firefox Browser" { spawn "firefox"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
