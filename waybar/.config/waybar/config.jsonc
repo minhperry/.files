@@ -24,6 +24,8 @@
     "custom/sep",
     "custom/bandwidth",
     "custom/sep",
+    "battery",
+    "custom/sep",
     "custom/wlogout"
   ]
 }
