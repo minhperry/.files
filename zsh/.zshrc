@@ -7,6 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 export GPG_TTY=$(tty)
 
 # Path to your oh-my-zsh installation.
@@ -190,3 +191,4 @@ fi
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK.
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+. "/home/minh/.deno/env"
