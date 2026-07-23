@@ -50,11 +50,19 @@ def main():
         f"{tx_icon}{num_left}{{tx}}{{unit_suffix}}{num_right}"
     )
     unit_suffix = SUFFIX
-    iface = default_interface()
-
-    rx_bytes, tx_bytes = get_rx_tx_bytes(iface)
+    iface = None
+    rx_bytes, tx_bytes = 0, 0
+    try:
+        iface = default_interface()
+        rx_bytes, tx_bytes = get_rx_tx_bytes(iface) 
+    except:
+        pass
 
     while True:
+        if iface == None:
+            print("-", flush=True)
+            sleep(refresh_interval)
+            return
         prev_rx_bytes, prev_tx_bytes = rx_bytes, tx_bytes
         rx_bytes, tx_bytes = get_rx_tx_bytes(iface)
         drx = format_size((rx_bytes - prev_rx_bytes) / refresh_interval)
