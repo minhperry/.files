@@ -6,6 +6,8 @@
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "waybar"
 spawn-at-startup "noctalia"
+// Provides KWallet through the Secret Service compatibility interface.
+spawn-at-startup "ksecretd"
 spawn-sh-at-startup "swaybg -i ~/Pictures/Screensaver/shiolie.jpg -m fill"
 // Replaced by Noctalia clipboard history.
 // spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
