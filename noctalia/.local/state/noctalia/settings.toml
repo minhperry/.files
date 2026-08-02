@@ -4,13 +4,29 @@ config_version = 8
 order = [ "waybar-repl" ]
 
     [bar.waybar-repl]
-    end = [ "tray", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "session" ]
+    end = [ "tray", "network", "bluetooth", "volume", "brightness", "group:g2", "battery", "session" ]
     margin_ends = 0
     padding = 8
     panel_overlap = 0
     radius = 0
     shadow = false
-    start = [ "notifications", "launcher", "workspaces", "media" ]
+    start = [ "notifications", "workspaces", "group:g1", "taskbar" ]
+
+        [[bar.waybar-repl.capsule_group]]
+        enabled = true
+        fill = "#30364D"
+        id = "g1"
+        members = [ "cpu", "ram", "temp" ]
+        opacity = 1.0
+        padding = 6.0
+
+        [[bar.waybar-repl.capsule_group]]
+        enabled = true
+        fill = "#30364D"
+        id = "g2"
+        members = [ "network_tx", "network_rx" ]
+        opacity = 1.0
+        padding = 6.0
 
 [battery.device."/org/freedesktop/UPower/devices/battery_hidpp_battery_0"]
 warning_threshold = 20
@@ -146,7 +162,9 @@ polkit_agent = true
     shadow = false
 
     [shell.screenshot]
+    confirm_region = true
     directory = "/home/minh/Pictures/Screenshot"
+    show_cursor = true
 
     [shell.session]
     show_shortcuts = false
@@ -177,6 +195,10 @@ enabled = false
     [wallpaper.monitor.eDP-1]
     fill_color = "primary"
 
+[widget.audio_visualizer]
+bands = 127
+width = 400
+
 [widget.battery]
 capsule = true
 capsule_fill = "#30364D"
@@ -195,12 +217,18 @@ capsule_fill = "#30364D"
 enabled = false
 
 [widget.clock]
-format = "{:%H:%M:%S}"
+format = "{:%a %d %b}, {:%H:%M:%S}"
 
 [widget.control-center]
 enabled = false
 
+[widget.cpu]
+display = "text"
+
 [widget.launcher]
+enabled = false
+
+[widget.lock_keys]
 enabled = false
 
 [widget.media]
@@ -212,14 +240,35 @@ capsule_fill = "#30364D"
 show_label = false
 vpn_status = "both"
 
+[widget.network_rx]
+display = "text"
+glyph = "arrow-big-down-filled"
+
+[widget.network_tx]
+display = "text"
+glyph = "arrow-big-up-filled"
+highlight_color = "on_surface"
+
 [widget.notifications]
 capsule = true
-capsule_fill = "#30363D"
+capsule_fill = "#30364D"
+
+[widget.privacy]
+enabled = false
+
+[widget.ram]
+display = "text"
 
 [widget.session]
 capsule = true
 capsule_fill = "#3B2D3D"
 color = "#F7768E"
+
+[widget.taskbar]
+enabled = false
+
+[widget.temp]
+display = "text"
 
 [widget.tray]
 capsule = true
@@ -230,11 +279,13 @@ capsule_radius = "auto"
 capsule = true
 capsule_fill = "#30364D"
 
-[widget.workspaces]
-focused_color = "#7AA2F7"
-occupied_color = "#BB9AF7"
-empty_color = "#414868"
-urgent_color = "#F7768E"
-
 [widget.wallpaper]
 enabled = false
+
+[widget.workspaces]
+capsule = true
+capsule_fill = "#30364D"
+empty_color = "surface_variant"
+focused_color = "primary"
+occupied_color = "secondary"
+urgent_color = "error"
