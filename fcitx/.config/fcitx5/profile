@@ -1,28 +1,28 @@
 [Groups/0]
 # Group Name
-Name=VI
-# Layout
-Default Layout=de-nodeadkeys
-# Default Input Method
-DefaultIM=bamboo
-
-[Groups/0/Items/0]
-# Name
-Name=bamboo
-# Layout
-Layout=
-
-[Groups/1]
-# Group Name
 Name=DE
 # Layout
 Default Layout=de-nodeadkeys
 # Default Input Method
 DefaultIM=keyboard-de-nodeadkeys
 
-[Groups/1/Items/0]
+[Groups/0/Items/0]
 # Name
 Name=keyboard-de-nodeadkeys
+# Layout
+Layout=
+
+[Groups/1]
+# Group Name
+Name=VI
+# Layout
+Default Layout=de-nodeadkeys
+# Default Input Method
+DefaultIM=bamboo
+
+[Groups/1/Items/0]
+# Name
+Name=bamboo
 # Layout
 Layout=
 
