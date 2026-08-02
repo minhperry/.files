@@ -1,24 +1,16 @@
 config_version = 8
 
-[bar.default]
-end = [
-    "tray",
-    "notifications",
-    "clipboard",
-    "network",
-    "bluetooth",
-    "volume",
-    "brightness",
-    "battery",
-    "control-center",
-    "session"
-]
-margin_ends = 0
-padding = 8
-panel_overlap = 0
-radius = 0
-shadow = false
-start = [ "launcher", "workspaces", "media" ]
+[bar]
+order = [ "waybar-repl" ]
+
+    [bar.waybar-repl]
+    end = [ "tray", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "session" ]
+    margin_ends = 0
+    padding = 8
+    panel_overlap = 0
+    radius = 0
+    shadow = false
+    start = [ "notifications", "launcher", "workspaces", "media" ]
 
 [battery.device."/org/freedesktop/UPower/devices/battery_hidpp_battery_0"]
 warning_threshold = 20
@@ -26,6 +18,21 @@ warning_threshold = 20
 [brightness]
 enable_ddcutil = true
 minimum_brightness = 0.0099999997764825821
+
+[control_center]
+hidden_tabs = [ "power", "weather" ]
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
 
 [desktop_widgets]
 enabled = false
@@ -97,6 +104,20 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
         show_session_buttons = true
         show_weather = true
 
+[notification.filter.abrt_applet]
+match = "abrt-applet"
+show_toast = false
+
+[notification.filter.kitty]
+match = "kitty"
+override_duration = 2000
+
+[osd]
+background_opacity = 0.99999997764825821
+
+    [osd.kinds]
+    media = false
+
 [plugins]
 enabled = [ "oldirtty/color_picker" ]
 
@@ -108,12 +129,24 @@ polkit_agent = true
     [shell.animation]
     speed = 1.5000000223517418
 
+    [shell.launcher]
+    provider_prefix = "!"
+
+        [shell.launcher.providers.calculator]
+        prefix = ""
+
+        [shell.launcher.providers.session]
+        prefix = "ses"
+
+        [shell.launcher.providers.wallpaper]
+        prefix = "wp"
+
     [shell.panel]
     clipboard_placement = "attached"
     shadow = false
 
     [shell.screenshot]
-    save_to_file = false
+    directory = "/home/minh/Pictures/Screenshot"
 
     [shell.session]
     show_shortcuts = false
@@ -124,6 +157,9 @@ community_palette = "Tokyo Night Storm"
 mode = "dark"
 source = "community"
 wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    enable_builtin_templates = false
 
 [wallpaper]
 directory = "/home/minh/Pictures/Screensaver"
@@ -141,8 +177,64 @@ enabled = false
     [wallpaper.monitor.eDP-1]
     fill_color = "primary"
 
+[widget.battery]
+capsule = true
+capsule_fill = "#30364D"
+hide_when_full = true
+hide_when_plugged = true
+
+[widget.bluetooth]
+capsule = true
+capsule_fill = "#30364D"
+
+[widget.brightness]
+capsule = true
+capsule_fill = "#30364D"
+
+[widget.clipboard]
+enabled = false
+
 [widget.clock]
 format = "{:%H:%M:%S}"
+
+[widget.control-center]
+enabled = false
+
+[widget.launcher]
+enabled = false
+
+[widget.media]
+enabled = false
+
+[widget.network]
+capsule = true
+capsule_fill = "#30364D"
+show_label = false
+vpn_status = "both"
+
+[widget.notifications]
+capsule = true
+capsule_fill = "#30363D"
+
+[widget.session]
+capsule = true
+capsule_fill = "#3B2D3D"
+color = "#F7768E"
+
+[widget.tray]
+capsule = true
+capsule_fill = "#30364D"
+capsule_radius = "auto"
+
+[widget.volume]
+capsule = true
+capsule_fill = "#30364D"
+
+[widget.workspaces]
+focused_color = "#7AA2F7"
+occupied_color = "#BB9AF7"
+empty_color = "#414868"
+urgent_color = "#F7768E"
 
 [widget.wallpaper]
 enabled = false
