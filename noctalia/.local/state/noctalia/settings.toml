@@ -1,0 +1,148 @@
+config_version = 8
+
+[bar.default]
+end = [
+    "tray",
+    "notifications",
+    "clipboard",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "control-center",
+    "session"
+]
+margin_ends = 0
+padding = 8
+panel_overlap = 0
+radius = 0
+shadow = false
+start = [ "launcher", "workspaces", "media" ]
+
+[battery.device."/org/freedesktop/UPower/devices/battery_hidpp_battery_0"]
+warning_threshold = 20
+
+[brightness]
+enable_ddcutil = true
+minimum_brightness = 0.0099999997764825821
+
+[desktop_widgets]
+enabled = false
+
+[dock]
+position = "top"
+reserve_space = false
+show_dots = true
+smart_auto_hide = true
+
+[location]
+address = "Dortmund, Germany"
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 229.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 881.5
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 229.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 881.5
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_weather = true
+
+[plugins]
+enabled = [ "oldirtty/color_picker" ]
+
+[shell]
+lang = "en"
+niri_overview_type_to_launch_enabled = true
+polkit_agent = true
+
+    [shell.animation]
+    speed = 1.5000000223517418
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    shadow = false
+
+    [shell.screenshot]
+    save_to_file = false
+
+    [shell.session]
+    show_shortcuts = false
+
+[theme]
+builtin = "Tokyo-Night"
+community_palette = "Tokyo Night Storm"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "m3-content"
+
+[wallpaper]
+directory = "/home/minh/Pictures/Screensaver"
+enabled = false
+
+    [wallpaper.default]
+    path = "/home/minh/Pictures/Screensaver/shiolie.jpg"
+
+    [wallpaper.last]
+    path = "/home/minh/Pictures/Screensaver/shiolie.jpg"
+
+    [wallpaper.monitor.HDMI-A-1]
+    fill_color = "secondary"
+
+    [wallpaper.monitor.eDP-1]
+    fill_color = "primary"
+
+[widget.clock]
+format = "{:%H:%M:%S}"
+
+[widget.wallpaper]
+enabled = false
