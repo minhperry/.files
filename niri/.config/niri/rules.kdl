@@ -34,6 +34,12 @@ window-rule {
     open-floating true
 }
 
+// Open GNOME Calculator as a floating utility window.
+window-rule {
+    match app-id="org.gnome.Calculator"
+    open-floating true
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
