@@ -7,7 +7,8 @@
 // spawn-at-startup "waybar"
 spawn-at-startup "noctalia"
 spawn-sh-at-startup "swaybg -i ~/Pictures/Screensaver/shiolie.jpg -m fill"
-spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
+// Replaced by Noctalia clipboard history.
+// spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

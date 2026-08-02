@@ -15,7 +15,9 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal" { spawn "kitty"; }
-    Alt+Space hotkey-overlay-title="Run an Application" { spawn-sh "killall rofi || rofi -show"; }
+    // Replaced by Noctalia v5 launcher; retained for quick rollback.
+    // Alt+Space hotkey-overlay-title="Run an Application" { spawn-sh "killall rofi || rofi -show"; }
+    Alt+Space hotkey-overlay-title="Open Noctalia Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen" { spawn "swaylock"; }
     Mod+E hotkey-overlay-title="Open Dolphin" { spawn "dolphin"; }
     Mod+B hotkey-overlay-title="Open Firefox Browser" { spawn "firefox"; }
@@ -250,7 +252,9 @@ binds {
     // Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     
     // Copy service
-    Mod+V hotkey-overlay-title="Open Clipboard" { spawn-sh "$HOME/dotfiles/scripts/cliphist-rofi-img | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"; }
+    // Replaced by Noctalia v5 clipboard history; retained for quick rollback.
+    // Mod+V hotkey-overlay-title="Open Clipboard" { spawn-sh "$HOME/dotfiles/scripts/cliphist-rofi-img | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"; }
+    Mod+V hotkey-overlay-title="Open Noctalia Clipboard" { spawn-sh "noctalia msg panel-toggle clipboard"; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
@@ -267,6 +271,8 @@ binds {
 
     // Print { spawn "flameshot" "gui"; }
     Print { spawn "/home/minh/.local/bin/flameshot-niri" "gui"; }
+    // Noctalia v5 alternative:
+    // Print { spawn-sh "noctalia msg screenshot-region"; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
