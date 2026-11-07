@@ -31,12 +31,9 @@ window-rule {
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
-// Open GNOME Calculator as a floating utility window.
-window-rule {
     match app-id="org.gnome.Calculator"
+    match app-id="flameshot"
+
     open-floating true
 }
 

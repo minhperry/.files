@@ -195,3 +195,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
+
+export ANDROID_HOME=~/Android/sdk
+
+. "$HOME/.local/share/../bin/env"
