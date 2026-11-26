@@ -41,7 +41,7 @@ overview {
 
   workspace-shadow {
     off
-  }
+    }
 }
 
 layer-rule {

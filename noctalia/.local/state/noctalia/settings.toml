@@ -1,4 +1,4 @@
-config_version = 16
+config_version = 20
 
 [bar]
 order = [ "waybar-repl" ]
@@ -250,7 +250,7 @@ background_opacity = 0.99999997764825821
     media = false
 
 [plugins]
-enabled = [ "kenn/keybind-cheatsheet", "radimous/prismlauncher-instances", "minh/activate-fedora" ]
+enabled = [ "kenn/keybind-cheatsheet", "radimous/prismlauncher-instances" ]
 
 [shell]
 lang = "en"

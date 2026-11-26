@@ -1,16 +1,4 @@
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://niri-wm.github.io/niri/Configuration:-Window-Rules
 
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
 
 // vdu_controls always floating
 window-rule {
@@ -30,18 +18,33 @@ window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    match app-id="org.gnome.Calculator"
-    match app-id="flameshot"
+    match app-id=r"firefox$" title="^Picture-in-Picture$"
+    open-floating true
+}
 
+// GNOME Calculator always floating
+window-rule {
+    match app-id="org.gnome.Calculator"
+    open-floating true
+}
+
+// Flameshot always floating
+window-rule {
+    match app-id="flameshot"
+    open-floating true
+}
+
+// KDE Connect daemon windows always floating
+window-rule {
+    match app-id="org.kde.kdeconnect.daemon"
     open-floating true
 }
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    match app-id=r"^org\.keepassxc\.KeePassXC$"
+    match app-id=r"^org\.gnome\.World\.Secrets$"
 
     block-out-from "screen-capture"
 
@@ -73,5 +76,5 @@ debug {
 gestures {
   hot-corners {
     off
-  }
+    }
 }

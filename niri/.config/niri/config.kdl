@@ -4,6 +4,8 @@
 // https://niri-wm.github.io/niri/Configuration:-Introduction
 
 include "input.kdl"
+
+environment
 include "outputs.kdl"
 include "layout.kdl"
 include "startup.kdl"
